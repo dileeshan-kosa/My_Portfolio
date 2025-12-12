@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Certificates", href: "#certificates" },
-  { name: "Skills", href: "#skills" },
-  { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -52,11 +52,10 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
+        : "bg-transparent"
+        }`}
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between h-16 md:h-20">
@@ -71,7 +70,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           >
             <Shield className="w-8 h-8 text-primary" />
             <span className="font-mono text-lg font-bold tracking-tight">
-              DK<span className="text-primary">_</span>SEC
+              DILEE<span className="text-primary">_</span>SHAN
             </span>
           </a>
 
@@ -85,9 +84,8 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className={`nav-link text-sm font-medium ${
-                  activeSection === link.href.slice(1) ? "active" : ""
-                }`}
+                className={`nav-link text-sm font-medium ${activeSection === link.href.slice(1) ? "active" : ""
+                  }`}
               >
                 {link.name}
               </a>
@@ -122,9 +120,8 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-96 pb-6" : "max-h-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? "max-h-96 pb-6" : "max-h-0"
+            }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-border">
             {navLinks.map((link) => (
@@ -135,9 +132,8 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className={`nav-link text-base font-medium py-2 ${
-                  activeSection === link.href.slice(1) ? "active" : ""
-                }`}
+                className={`nav-link text-base font-medium py-2 ${activeSection === link.href.slice(1) ? "active" : ""
+                  }`}
               >
                 {link.name}
               </a>

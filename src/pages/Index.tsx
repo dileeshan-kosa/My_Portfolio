@@ -15,7 +15,7 @@ const Index = () => {
     // Check for saved preference or default to dark
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
+
     if (savedTheme === "light") {
       setIsDark(false);
       document.documentElement.classList.remove("dark");
@@ -41,10 +41,10 @@ const Index = () => {
       <Header isDark={isDark} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <AboutSection />
+        <SkillsSection />
         <ProjectCarousel />
         <CertificateCarousel />
-        <SkillsSection />
-        <AboutSection />
         <ContactForm />
       </main>
       <Footer />

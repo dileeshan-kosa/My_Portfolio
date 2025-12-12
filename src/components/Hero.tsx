@@ -100,21 +100,21 @@ const Hero = () => {
               <div className="absolute -top-4 -right-4 bg-card border border-primary/30 rounded-lg px-3 py-2 shadow-lg">
                 <p className="font-mono text-xs text-primary">Security+</p>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-card border border-primary/30 rounded-lg px-3 py-2 shadow-lg">
+              {/* <div className="absolute -bottom-4 -left-4 bg-card border border-primary/30 rounded-lg px-3 py-2 shadow-lg">
                 <p className="font-mono text-xs text-primary">AWS</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
         <span className="text-xs font-mono text-muted-foreground">Scroll</span>
         <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center pt-2">
           <div className="w-1 h-3 bg-primary rounded-full animate-bounce" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Google Cybersecurity Certificate",
+    "issuer": "Google",
+    "date": "2024",
+    "image": "/placeholder.svg",
+    "link": "https://coursera.org/verify"
+  },
+  {
+    "id": "2",
+    "title": "IBM Cybersecurity Analyst",
+    "issuer": "IBM",
+    "date": "2024",
+    "image": "/placeholder.svg",
+    "link": "https://coursera.org/verify"
+  },
+  {
+    "id": "3",
+    "title": "AWS Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "date": "2023",
+    "image": "/placeholder.svg",
+    "link": "https://aws.amazon.com/verification"
+  },
+  {
+    "id": "4",
+    "title": "CompTIA Security+ (Prep)",
+    "issuer": "CompTIA",
+    "date": "2024",
+    "image": "/placeholder.svg",
+    "link": "https://comptia.org"
+  },
+  {
+    "id": "5",
+    "title": "Ethical Hacking Essentials",
+    "issuer": "EC-Council",
+    "date": "2023",
+    "image": "/placeholder.svg",
+    "link": "https://eccouncil.org"
+  }
+]

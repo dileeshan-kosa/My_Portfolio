@@ -1,25 +1,46 @@
-import { Code, Server, Database, Wrench } from "lucide-react";
+import { Code, Server, Database, Shield, Wrench, Cpu } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Frontend Development",
     icon: Code,
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "HTML5", "CSS3"],
+    skills: ["React", "JavaScript", "Tailwind CSS", "HTML5", "CSS", "TypeScript", "Next.js"],
   },
   {
-    title: "Backend",
+    title: "Backend Development",
     icon: Server,
-    skills: ["Python", "Node.js", "Flask", "FastAPI", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "Express.js", "Python", "FastAPI", "REST APIs", "JWT Authentication", "Blockchain Integration (Basics)"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "Firebase"],
+    skills: ["MongoDB", "Firebase", "MySQL", "Redis",],
+  },
+  {
+    title: "Cyber Security",
+    icon: Shield,
+    skills: [
+      "Ethical Hacking",
+      "Application Security",
+      "Network Security",
+      "Fingerprint Authentication",
+      "Threat Analysis",
+    ],
+  },
+  {
+    title: "IoT & Biometrics",
+    icon: Cpu,
+    skills: [
+      "Fingerprint Authentication",
+      "R307 Sensors",
+      "UART Communication",
+      "Biometric Template Handling",
+    ],
   },
   {
     title: "Tools & Technology",
     icon: Wrench,
-    skills: ["Git", "Docker", "Linux", "AWS", "Splunk", "Wireshark"],
+    skills: ["Git", "GitHub", "Docker (Basics)", "Linux", "Wireshark", "AWS", "Postman", "Figma"],
   },
 ];
 
@@ -32,11 +53,11 @@ const SkillsSection = () => {
             Technical <span className="text-gradient-cyber">Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building secure and scalable solutions
+            Technologies and tools I use to build secure, scalable, and real-world applications
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category) => (
             <div
               key={category.title}

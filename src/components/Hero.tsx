@@ -39,17 +39,28 @@ const Hero = () => {
 
             <div className="opacity-0 animate-slide-in-up animate-delay-200">
               <p className="font-mono text-muted-foreground text-sm md:text-base mb-6">
-                Cybersecurity Undergraduate | Security Researcher | Developer
+                Cyber Security Final Year Student | Full Stack Developer | Cybersecurity Enthusiast
               </p>
             </div>
 
             <div className="opacity-0 animate-slide-in-up animate-delay-300">
-              <p className="text-foreground/80 text-base md:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              {/* <p className="text-foreground/80 text-base md:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
                 Cybersecurity Undergraduate focused on{" "}
                 <span className="text-primary font-medium">Threat Detection</span>,{" "}
                 <span className="text-primary font-medium">Secure System Design</span> &{" "}
                 <span className="text-primary font-medium">Cloud Security</span>.
+              </p> */}
+
+              <p className="text-foreground/80 text-base md:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                Final-year Cybersecurity student specializing in{" "}
+                <span className="text-primary font-medium">Full Stack Development</span>.
+                I enjoy combining{" "}
+                <span className="text-primary font-medium">creativity</span> and{" "}
+                <span className="text-primary font-medium">logic</span> to build{" "}
+                <span className="text-primary font-medium">secure, high-performance applications</span>{" "}
+                while staying up to date with emerging security research and technology trends.
               </p>
+
             </div>
 
             <div className="opacity-0 animate-slide-in-up animate-delay-400 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
@@ -58,7 +69,7 @@ const Hero = () => {
                 Download CV
               </Button>
               <Button variant="cyberOutline" size="lg" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/dileeshan-kosa" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                   GitHub
                 </a>
@@ -81,7 +92,7 @@ const Hero = () => {
             <div className="relative">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl scale-110" />
-              
+
               {/* Rotating border */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 animate-spin" style={{ animationDuration: "20s" }} />

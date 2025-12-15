@@ -29,6 +29,16 @@ const timeline = [
   },
 ];
 
+const academicJourney = {
+  year: "2022 – Present",
+  title: "BSc (Hons) in Cyber Security Engineering",
+  institute: "Sri Lanka Technology Campus (SLTC)",
+  location: "Padukka, Sri Lanka",
+  description:
+    "Currently a final-year undergraduate specializing in cyber security, secure systems, and applied software development. Engaged in academic projects, hands-on security labs, and real-world system design.",
+};
+
+
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding">
@@ -45,27 +55,31 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-foreground/80">
               <p>
-                I'm <span className="text-primary font-medium">Dileeshan Kosala</span>, 
-                a passionate Cybersecurity undergraduate with a deep interest in protecting 
-                digital assets and building secure systems.
+                I'm <span className="text-primary font-medium">Dileeshan Kosala</span>,
+                a final-year Cyber Security undergraduate and aspiring Full Stack Developer
+                with a strong interest in building secure, scalable, and real-world applications.
               </p>
+
               <p>
-                My focus areas include <span className="text-primary">threat detection</span>, 
-                <span className="text-primary"> secure system design</span>, and 
-                <span className="text-primary"> cloud security</span>. I combine theoretical 
-                knowledge with hands-on experience in both offensive and defensive security.
+                I focus on <span className="text-primary">application security</span>,
+                <span className="text-primary"> full stack development</span>, and
+                <span className="text-primary"> secure system design</span>.
+                I enjoy combining security principles with modern development practices
+                to create robust and efficient software solutions.
               </p>
+
               <p>
-                When I'm not hunting for vulnerabilities or building security tools, 
-                you'll find me researching the latest cyber threats, contributing to 
-                open-source security projects, or participating in CTF competitions.
+                I’m always eager to learn new technologies, stay updated with industry trends,
+                and explore areas like ethical hacking, reverse engineering, and application
+                security engineering. I actively look for opportunities where I can grow,
+                solve challenges, and contribute to meaningful projects.
               </p>
             </div>
 
             {/* Skills */}
             <div className="mt-8">
               <h3 className="font-mono text-lg font-bold mb-4 text-foreground">
-                {"<"} Skills {"/>"}
+                {"<"} Favorite {"/>"}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
@@ -84,37 +98,65 @@ const AboutSection = () => {
           {/* Right Column - Timeline */}
           <div>
             <h3 className="font-mono text-lg font-bold mb-8 text-foreground">
-              {"<"} Journey {"/>"}
+              {"<"} Academic Journey {"/>"}
             </h3>
-            <div className="relative">
+
+            <div className="relative pl-12">
               {/* Timeline line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent" />
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-transparent" />
 
-              <div className="space-y-8">
-                {timeline.map((item, index) => (
-                  <div key={index} className="relative pl-12">
-                    {/* Timeline dot */}
-                    <div className="absolute left-2 top-1 w-5 h-5 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
+              {/* Timeline dot */}
+              <div className="absolute left-2 top-2 w-5 h-5 rounded-full bg-background border-2 border-primary flex items-center justify-center">
+                <div className="w-2 h-2 rounded-full bg-primary" />
+              </div>
 
-                    <div className="cyber-card p-5">
-                      <span className="text-primary font-mono text-sm">
-                        {item.year}
-                      </span>
-                      <h4 className="font-bold text-lg mt-1 text-foreground">
-                        {item.title}
-                      </h4>
-                      <p className="text-muted-foreground text-sm mt-2">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              <div className="cyber-card p-6">
+                <span className="text-primary font-mono text-sm">
+                  {academicJourney.year}
+                </span>
+
+                <h4 className="font-bold text-lg mt-2 text-foreground">
+                🎓 {academicJourney.title}
+                </h4>
+
+                <p className="text-sm text-muted-foreground mt-1">
+                  {academicJourney.institute} — 📍 {academicJourney.location}
+                </p>
+
+                <p className="text-muted-foreground text-sm mt-3">
+                  {academicJourney.description}
+                </p>
               </div>
             </div>
 
-            {/* Stats */}
+            {/* Career Focus */}
+            <div className="mt-10">
+              <h3 className="font-mono text-lg font-bold mb-4 text-foreground">
+                {"<"} Career Focus {"/>"}
+              </h3>
+
+              <div className="cyber-card p-5 space-y-3 text-sm text-muted-foreground">
+                <p>
+                  🔐 Cyber Security Engineering & Application Security
+                </p>
+
+                <p>
+                  💻 Full Stack Development with security-first design
+                </p>
+
+                <p>
+                  🧠 Interested in secure authentication systems, blockchain-based solutions,
+                  and real-world cyber defense mechanisms
+                </p>
+
+                <p>
+                  🎯 Seeking internship opportunities to apply academic knowledge in
+                  real-world environments and grow as a security-focused engineer
+                </p>
+              </div>
+            </div>
+
+            {/* Stats (UNCHANGED) */}
             <div className="grid grid-cols-3 gap-4 mt-12">
               <div className="text-center cyber-card p-4">
                 <p className="text-3xl font-bold text-primary">5+</p>
@@ -129,7 +171,9 @@ const AboutSection = () => {
                 <p className="text-xs text-muted-foreground mt-1">Years Learning</p>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>

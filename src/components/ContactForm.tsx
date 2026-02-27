@@ -2,16 +2,25 @@ import { useState } from "react";
 import { Send, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
   const { toast } = useToast();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Email validation regex (MANDATORY)
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -22,18 +31,71 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Custom validation
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast({
+        title: "Missing fields",
+        description: "Please fill in all fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Message Sent ✅",
+        description: "Thank you! I’ll get back to you soon.",
+      });
+
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+
+      toast({
+        title: "Error ❌",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+
+    } finally {
+      setIsSubmitting(false);
+    }
+
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    // toast({
+    //   title: "Message sent!",
+    //   description: "Thank you for reaching out. I'll get back to you soon.",
+    // });
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+    // setFormData({ name: "", email: "", subject: "", message: "" });
+    // setIsSubmitting(false);
   };
 
   return (
@@ -43,9 +105,11 @@ const ContactForm = () => {
           <p className="text-primary font-mono text-sm mb-2 tracking-wider">
             {"// GET IN TOUCH"}
           </p>
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Let's <span className="text-gradient-cyber">Connect</span>
           </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to discuss cybersecurity? Feel free to reach out!
           </p>
@@ -61,7 +125,7 @@ const ContactForm = () => {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:dileeshan@example.com"
+                  href="mailto:dileeshankosala2@gmail.com"
                   className="flex items-center gap-4 p-4 cyber-card group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -69,7 +133,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium text-foreground">dileeshan@example.com</p>
+                    <p className="font-medium text-foreground">dileeshankosala2@gmail.com</p>
                   </div>
                 </a>
 
@@ -92,7 +156,7 @@ const ContactForm = () => {
               </h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/dileeshan-kosa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg cyber-card flex items-center justify-center hover:text-primary transition-colors"
@@ -101,7 +165,7 @@ const ContactForm = () => {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="http://linkedin.com/in/dileeshan-kosala"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg cyber-card flex items-center justify-center hover:text-primary transition-colors"
@@ -110,7 +174,7 @@ const ContactForm = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:dileeshan@example.com"
+                  href="mailto:dileeshankosala2@gmail.com"
                   className="w-12 h-12 rounded-lg cyber-card flex items-center justify-center hover:text-primary transition-colors"
                   aria-label="Email"
                 >
@@ -135,7 +199,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                  placeholder="John Doe"
+                  placeholder="Dileeshan Kosala"
                 />
               </div>
               <div>
@@ -150,7 +214,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                  placeholder="john@example.com"
+                  placeholder="Dileeshan@example.com"
                 />
               </div>
             </div>

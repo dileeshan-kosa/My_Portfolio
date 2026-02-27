@@ -1,6 +1,7 @@
 import { Github, Mail, Download, Shield, Lock, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/profile-placeholder.png";
+import profileImagess from "@/assets/My image2.jpg";
 
 const Hero = () => {
   return (
@@ -99,7 +100,7 @@ const Hero = () => {
                 <div className="absolute inset-4 rounded-full border border-primary/50" />
                 <div className="absolute inset-8 rounded-full overflow-hidden cyber-glow">
                   <img
-                    src={profileImage}
+                    src={profileImagess}
                     alt="Dileeshan Kosala - Cybersecurity Professional"
                     className="w-full h-full object-cover"
                     loading="eager"

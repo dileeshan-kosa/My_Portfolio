@@ -1,42 +1,50 @@
 [
   {
     "id": "1",
-    "title": "Google Cybersecurity Certificate",
-    "issuer": "Google",
-    "date": "2024",
-    "image": "/placeholder.svg",
-    "link": "https://coursera.org/verify"
+    "title": "Python For Beginners",
+    "issuer": "Open Learning Platform - UoM",
+    "date": "2023",
+    "image": "/thumbnails/Python_for_Beginners_E-Certificate.JPG",
+    "link": "/certificates/Python_for_Beginners_E-Certificate.pdf"
   },
   {
     "id": "2",
-    "title": "IBM Cybersecurity Analyst",
-    "issuer": "IBM",
+    "title": "Python Programming",
+    "issuer": "Open Learning Platform - UoM",
     "date": "2024",
-    "image": "/placeholder.svg",
-    "link": "https://coursera.org/verify"
+    "image": "/thumbnails/Python_Programming_E-Certificate.JPG",
+    "link": "/certificates/Python_Programming_E-Certificate.pdf"
   },
   {
     "id": "3",
-    "title": "AWS Cloud Practitioner",
-    "issuer": "Amazon Web Services",
-    "date": "2023",
-    "image": "/placeholder.svg",
-    "link": "https://aws.amazon.com/verification"
+    "title": "Server-side Web Programming",
+    "issuer": "Open Learning Platform - UoM",
+    "date": "2024",
+    "image": "/thumbnails/Server-side_Web_Programming_E-Certificate.JPG",
+    "link": "/certificates/Server-side_Web_Programming_E-Certificate.pdf"
   },
   {
     "id": "4",
-    "title": "CompTIA Security+ (Prep)",
-    "issuer": "CompTIA",
-    "date": "2024",
-    "image": "/placeholder.svg",
-    "link": "https://comptia.org"
+    "title": "Front-End Web Development",
+    "issuer": "Open Learning Platform - UoM",
+    "date": "2025",
+    "image": "/thumbnails/Front-End_Web_Development_E-Certificate.JPG",
+    "link": "/certificates/Front-End_Web_Development_E-Certificate.pdf"
   },
   {
     "id": "5",
-    "title": "Ethical Hacking Essentials",
-    "issuer": "EC-Council",
-    "date": "2023",
-    "image": "/placeholder.svg",
-    "link": "https://eccouncil.org"
+    "title": "Web_Design For Beginners",
+    "issuer": "Open Learning Platform - UoM",
+    "date": "2025",
+    "image": "/thumbnails/Web_Design_for_Beginners_E-Certificate.JPG",
+    "link": "/certificates/Web_Design_for_Beginners_E-Certificate.pdf"
+  },
+  {
+    "id": "6",
+    "title": "Software Quality Assurance",
+    "issuer": "Open Learning Platform - UoM",
+    "date": "2025",
+    "image": "/thumbnails/Introduction_to_Software_Quality_Assurance_E-Certificate.JPG",
+    "link": "/certificates/Introduction_to_Software_Quality_Assurance_E-Certificate.pdf"
   }
 ]

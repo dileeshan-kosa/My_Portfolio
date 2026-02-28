@@ -65,9 +65,15 @@ const Hero = () => {
             </div>
 
             <div className="opacity-0 animate-slide-in-up animate-delay-400 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
-              <Button variant="cyber" size="lg">
-                <Download className="w-5 h-5" />
-                Download CV
+
+              {/* UPDATED DOWNLOAD BUTTON */}
+              <Button variant="cyber" size="lg" asChild>
+                {/* <Download className="w-5 h-5" />
+                Download CV */}
+                <a href="/Mycvfile.pdf" download="Mycvfile.pdf">
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </a>
               </Button>
               <Button variant="cyberOutline" size="lg" asChild>
                 <a href="https://github.com/dileeshan-kosa" target="_blank" rel="noopener noreferrer">

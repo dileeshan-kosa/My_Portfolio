@@ -38,6 +38,22 @@ const academicJourney = {
     "Currently a final-year undergraduate specializing in cyber security, secure systems, and applied software development. Engaged in academic projects, hands-on security labs, and real-world system design.",
 };
 
+const volunteeringJourney = [
+  {
+    year: "Sep 2025 – Present",
+    title: "Publicity Manager (Head) & Founding OC",
+    institute: "ISACA Student Group SLTC",
+    description:
+      "Co-founded the campus chapter of the Information Systems Audit and Control Association (ISACA) as part of the first Organizing Committee. Currently leading publicity efforts and engaging in cybersecurity-focused volunteering and projects.",
+  },
+  {
+    year: "Jun 2024 – Jun 2025",
+    title: "Editor, Satellite and IT Division",
+    institute: "SEDS SLTC",
+    description:
+      "Contributed to the Students for the Exploration and Development of Space (SEDS) club through active volunteer work and technical project involvement.",
+  },
+];
 
 const AboutSection = () => {
   return (
@@ -74,6 +90,33 @@ const AboutSection = () => {
                 security engineering. I actively look for opportunities where I can grow,
                 solve challenges, and contribute to meaningful projects.
               </p>
+            </div>
+
+            {/* Career Focus */}
+            <div className="mt-10">
+              <h3 className="font-mono text-lg font-bold mb-4 text-foreground">
+                {"<"} Career Focus {"/>"}
+              </h3>
+
+              <div className="cyber-card p-5 space-y-3 text-sm text-muted-foreground">
+                <p>
+                  🔐 Cyber Security Engineering & Application Security
+                </p>
+
+                <p>
+                  💻 Full Stack Development with security-first design
+                </p>
+
+                <p>
+                  🧠 Interested in secure authentication systems, blockchain-based solutions,
+                  and real-world cyber defense mechanisms
+                </p>
+
+                <p>
+                  🎯 Seeking internship opportunities to apply academic knowledge in
+                  real-world environments and grow as a security-focused engineer
+                </p>
+              </div>
             </div>
 
             {/* Skills */}
@@ -116,7 +159,7 @@ const AboutSection = () => {
                 </span>
 
                 <h4 className="font-bold text-lg mt-2 text-foreground">
-                🎓 {academicJourney.title}
+                  🎓 {academicJourney.title}
                 </h4>
 
                 <p className="text-sm text-muted-foreground mt-1">
@@ -129,30 +172,42 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Career Focus */}
-            <div className="mt-10">
-              <h3 className="font-mono text-lg font-bold mb-4 text-foreground">
-                {"<"} Career Focus {"/>"}
-              </h3>
+            {/* Volunteering Journey */}
+            <h3 className="font-mono text-lg font-bold mb-8 mt-12 text-foreground">
+              {"<"} Volunteering Journey {"/>"}
+            </h3>
 
-              <div className="cyber-card p-5 space-y-3 text-sm text-muted-foreground">
-                <p>
-                  🔐 Cyber Security Engineering & Application Security
-                </p>
+            <div className="relative pl-12">
+              {/* Timeline line */}
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-transparent" />
 
-                <p>
-                  💻 Full Stack Development with security-first design
-                </p>
+              <div className="space-y-8">
+                {volunteeringJourney.map((item, index) => (
+                  <div key={index} className="relative">
+                    {/* Timeline dot */}
+                    <div className="absolute -left-10 top-2 w-5 h-5 rounded-full bg-background border-2 border-primary flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                    </div>
 
-                <p>
-                  🧠 Interested in secure authentication systems, blockchain-based solutions,
-                  and real-world cyber defense mechanisms
-                </p>
+                    <div className="cyber-card p-6">
+                      <span className="text-primary font-mono text-sm">
+                        {item.year}
+                      </span>
 
-                <p>
-                  🎯 Seeking internship opportunities to apply academic knowledge in
-                  real-world environments and grow as a security-focused engineer
-                </p>
+                      <h4 className="font-bold text-lg mt-2 text-foreground">
+                        🤝 {item.title}
+                      </h4>
+
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {item.institute}
+                      </p>
+
+                      <p className="text-muted-foreground text-sm mt-3">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 

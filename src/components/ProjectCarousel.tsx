@@ -34,16 +34,18 @@ const ProjectCarousel = () => {
         {/* Carousel */}
         <Carousel>
           {projects.map((project) => (
-            <Card
-              key={project.id}
-              type="project"
-              title={project.title}
-              image={project.image}
-              description={project.description}
-              tech={project.tech}
-              github={project.github}
-              demo={project.demo}
-            />
+            <div key={project.id} className="[&>div]:h-[460px] md:[&>div]:h-[470px]">
+              <Card
+                key={project.id}
+                type="project"
+                title={project.title}
+                image={project.image}
+                description={project.description}
+                tech={project.tech}
+                github={project.github}
+                demo={project.demo}
+              />
+            </div>
           ))}
         </Carousel>
       </div>

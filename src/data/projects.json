@@ -1,47 +1,47 @@
 [
   {
     "id": "1",
-    "title": "AI-Powered Phishing Detector",
-    "image": "/placeholder.svg",
-    "description": "ML-based phishing email classifier using NLP techniques to identify malicious emails with 95% accuracy.",
-    "tech": ["Python", "Sklearn", "Flask", "NLP"],
-    "github": "https://github.com",
+    "title": "ACTIVE PLATE - Fitness & Nutrition",
+    "image": "/projects/Fitness_Aplication.jpg",
+    "description": "Full-stack fitness platform that dynamically generates highly personalized meal and workout plans based on algorithmic BMR calculations and user goals.",
+    "tech": ["React", "Node.js", "Firebase", "Tailwind CSS"],
+    "github": "https://github.com/dileeshan-kosa/Fitness_Web_Application.git",
     "demo": ""
   },
   {
     "id": "2",
-    "title": "Network Intrusion Detection System",
-    "image": "/placeholder.svg",
-    "description": "Real-time NIDS using deep learning to detect anomalous network traffic patterns and potential threats.",
-    "tech": ["Python", "TensorFlow", "Wireshark", "Docker"],
-    "github": "https://github.com",
-    "demo": "https://example.com"
+    "title": "ML Job Recommendation System",
+    "image": "/projects/job_recommendation.png",
+    "description": "Full-stack NLP pipeline leveraging SBERT and XGBoost to semantically match resume embeddings with job roles.",
+    "tech": ["Node.js", "Python", "SBERT", "XGBoost", "MongoDB"],
+    "github": "https://github.com/dileeshan-kosa/Job_Recommendation_ML_frontend.git",
+    "demo": ""
   },
   {
     "id": "3",
-    "title": "Secure File Vault",
-    "image": "/placeholder.svg",
-    "description": "End-to-end encrypted file storage solution with zero-knowledge architecture and multi-factor authentication.",
-    "tech": ["React", "Node.js", "AES-256", "AWS S3"],
-    "github": "https://github.com",
-    "demo": "https://example.com"
+    "title": "Food Odering Application",
+    "image": "/projects/Food_Odering.jpg",
+    "description": "Modern, full-stack eCommerce food ordering application featuring persistent cart management, secure authentication, and enterprise-grade Stripe payment processing.",
+    "tech": ["React", "Node.js", "Firebase", "Stripe"],
+    "github": "https://github.com/dileeshan-kosa/Food_Ordering_Full-Stack-Project.git",
+    "demo": ""
   },
   {
     "id": "4",
-    "title": "Vulnerability Scanner",
-    "image": "/placeholder.svg",
-    "description": "Automated web application security scanner that identifies OWASP Top 10 vulnerabilities.",
-    "tech": ["Python", "Selenium", "BeautifulSoup", "SQLMap"],
-    "github": "https://github.com",
+    "title": "Timetable Scheduler",
+    "image": "/projects/TimeTable_scheduler.png",
+    "description": "Comprehensive full-stack scheduling platform with real-time calendar sync, committee management, and automated scheduling conflict detection.",
+    "tech": ["React", "Node.js", "MongoDB", "Socket.io", "Ant Design"],
+    "github": "https://github.com/dileeshan-kosa/Updated_timetableschedule_frontend-.git",
     "demo": ""
   },
   {
     "id": "5",
-    "title": "SIEM Dashboard",
-    "image": "/placeholder.svg",
-    "description": "Custom security information and event management dashboard for real-time threat monitoring.",
+    "title": "Mobile Attendance System",
+    "image": "/projects/snap_attends.png",
+    "description": "Location-based mobile attendance management system featuring real-time geolocation verification, dynamic session handling, and multi-role access portals.",
     "tech": ["React", "ELK Stack", "Grafana", "PostgreSQL"],
-    "github": "https://github.com",
-    "demo": "https://example.com"
+    "github": "https://github.com/dileeshan-kosa/Attendance_Management_System-Mobile_Application.git",
+    "demo": ""
   }
 ]

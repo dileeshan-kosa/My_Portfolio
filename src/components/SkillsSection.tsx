@@ -23,7 +23,7 @@ const skillCategories = [
       "Ethical Hacking",
       "Application Security",
       "Network Security",
-      "Fingerprint Authentication",
+      "Bug Bounty",
       "Threat Analysis",
     ],
   },

@@ -1,6 +1,15 @@
 [
   {
     "id": "1",
+    "title": "Electronic Voting System Using Blockchain Technology",
+    "image": "/projects/Electronic_Voting.png",
+    "description": "Decentralized, hybrid blockchain electronic voting platform featuring hardware-level biometric authentication, AES-256 encrypted payloads, and tamper-proof verifiable AWS S3 disaster recovery.",
+    "tech": ["React", "Node.js", "MongoDB", "Solidity", "AWS S3", "IoT"],
+    "github": "https://github.com/dileeshan-kosa/Final-Year-Project.git",
+    "demo": ""
+  },
+  {
+    "id": "2",
     "title": "ACTIVE PLATE - Fitness & Nutrition",
     "image": "/projects/Fitness_Aplication.jpg",
     "description": "Full-stack fitness platform that dynamically generates highly personalized meal and workout plans based on algorithmic BMR calculations and user goals.",
@@ -9,7 +18,7 @@
     "demo": ""
   },
   {
-    "id": "2",
+    "id": "3",
     "title": "ML Job Recommendation System",
     "image": "/projects/job_recommendation.png",
     "description": "Full-stack NLP pipeline leveraging SBERT and XGBoost to semantically match resume embeddings with job roles.",
@@ -18,7 +27,7 @@
     "demo": ""
   },
   {
-    "id": "3",
+    "id": "4",
     "title": "Food Odering Application",
     "image": "/projects/Food_Odering.jpg",
     "description": "Modern, full-stack eCommerce food ordering application featuring persistent cart management, secure authentication, and enterprise-grade Stripe payment processing.",
@@ -27,7 +36,7 @@
     "demo": ""
   },
   {
-    "id": "4",
+    "id": "5",
     "title": "Timetable Scheduler",
     "image": "/projects/TimeTable_scheduler.png",
     "description": "Comprehensive full-stack scheduling platform with real-time calendar sync, committee management, and automated scheduling conflict detection.",
@@ -36,7 +45,7 @@
     "demo": ""
   },
   {
-    "id": "5",
+    "id": "6",
     "title": "Mobile Attendance System",
     "image": "/projects/snap_attends.png",
     "description": "Location-based mobile attendance management system featuring real-time geolocation verification, dynamic session handling, and multi-role access portals.",

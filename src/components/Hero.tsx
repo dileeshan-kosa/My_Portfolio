@@ -70,7 +70,7 @@ const Hero = () => {
               <Button variant="cyber" size="lg" asChild>
                 {/* <Download className="w-5 h-5" />
                 Download CV */}
-                <a href="/Mycvfile_1.pdf" download="Mycvfile_1.pdf">
+                <a href="/Dileeshan_Kosala.pdf" download="Dileeshan_Kosala.pdf">
                   <Download className="w-5 h-5" />
                   Download CV
                 </a>
